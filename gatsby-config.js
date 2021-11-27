@@ -4,5 +4,5 @@ module.exports = {
     title: "Site of Alexander Wiesinger",
     author: "Alexander Wiesinger",
   },
-  plugins: ["gatsby-plugin-sass"],
-};
+  plugins: ["gatsby-plugin-sass", `gatsby-plugin-image`, `gatsby-plugin-sharp`],
+}
