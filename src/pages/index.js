@@ -1,6 +1,5 @@
 import * as React from "react"
 
-import Layout from "../components/layout"
 import BrandLink from "../components/brand-link"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import {
@@ -10,12 +9,12 @@ import {
   faLinkedin,
   faXing,
 } from "@fortawesome/free-brands-svg-icons"
-import { VStack } from "@chakra-ui/react"
+import { Container, VStack } from "@chakra-ui/react"
 
 library.add(fab, faGithub, faInstagram, faXing, faLinkedin)
 
 const IndexPage = () => (
-  <Layout>
+  <Container>
     <h1>Hi people</h1>
     <VStack align="stretch">
       <BrandLink
@@ -43,7 +42,7 @@ const IndexPage = () => (
         color="pink"
       />
     </VStack>
-  </Layout>
+  </Container>
 )
 
 export default IndexPage

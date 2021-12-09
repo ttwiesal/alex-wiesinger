@@ -1,15 +1,17 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link, Button } from "@chakra-ui/react"
+import { Link, Button, LightMode } from "@chakra-ui/react"
 
 const BrandLink = ({ iconName, text, link, color }) => (
-  <Link href={link} isExternal>
-    <Button colorScheme={color} width="100%">
-      <FontAwesomeIcon icon={["fab", iconName]} />
-      {text}
-    </Button>
-  </Link>
+  <LightMode>
+    <Link href={link} isExternal>
+      <Button colorScheme={color} width="100%">
+        <FontAwesomeIcon icon={["fab", iconName]} />
+        {text}
+      </Button>
+    </Link>
+  </LightMode>
 )
 
 BrandLink.propTypes = {

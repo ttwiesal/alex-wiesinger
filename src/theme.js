@@ -1,12 +1,21 @@
-import { extendTheme } from "@chakra-ui/react"
+import { extendTheme, theme as baseTheme } from "@chakra-ui/react"
 
-// 2. Add your color mode config
 const config = {
   initialColorMode: "dark",
   useSystemColorMode: false,
 }
 
-// 3. extend the theme
-const theme = extendTheme({ config })
+const fonts = {
+  heading: "Open Sans",
+  body: "Raleway, Lucida Sans, Lucida Sans Regular, Lucida Grande, Lucida Sans Unicode, Geneva, Verdana, sans-serif",
+}
+
+const theme = extendTheme(
+  {
+    config,
+  },
+  { fonts },
+  baseTheme
+)
 
 export default theme
