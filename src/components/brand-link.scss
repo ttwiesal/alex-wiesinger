@@ -1,0 +1,22 @@
+$brand-palette: (
+  xing: #0ea85b,
+  linkedin: #0e76a8,
+  github: #2f343a,
+  instagram: #f33b78,
+);
+
+a {
+  display: inline-block;
+  width: calc(100% - 2rem);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+@each $brand-name, $brand-color in $brand-palette {
+  .#{$brand-name}:hover {
+    background: $brand-color;
+    color: white;
+  }
+}

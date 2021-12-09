@@ -1,7 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { Heading, Button } from "@chakra-ui/react"
 
 const Header = ({ siteTitle }) => {
   return (
@@ -18,7 +17,7 @@ const Header = ({ siteTitle }) => {
           padding: `1.45rem 1.0875rem`,
         }}
       >
-        <Heading style={{ margin: 0 }}>
+        <h1 style={{ margin: 0 }}>
           <Link
             to="/"
             style={{
@@ -28,7 +27,7 @@ const Header = ({ siteTitle }) => {
           >
             {siteTitle}
           </Link>
-        </Heading>
+        </h1>
       </div>
     </header>
   )
