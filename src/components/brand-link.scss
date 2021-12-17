@@ -5,19 +5,19 @@ $brand-palette: (
   instagram: #f33b78,
 );
 
-a {
-  display: inline-block;
-  width: calc(100% - 2rem);
-  text-decoration: none;
-  border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-  margin: 0.25rem 0;
-  color: white;
-}
-
 @each $brand-name, $brand-color in $brand-palette {
-  .#{$brand-name}:hover {
-    background: $brand-color;
+  a.#{$brand-name} {
+    display: inline-block;
+    width: calc(100% - 2rem);
+    text-decoration: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
     color: white;
+    background: rgba($brand-color, 0.5);
+
+    &:hover {
+      background: $brand-color;
+    }
   }
 }
