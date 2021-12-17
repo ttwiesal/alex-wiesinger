@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./brand-link.scss"
 
 const BrandLink = ({ iconName, text, link }) => (
-  <a href={link} class={iconName}>
+  <a href={link} class={iconName} target="_blank">
     <FontAwesomeIcon fixedWidth="true" icon={["fab", iconName]} />
     {text}
   </a>
