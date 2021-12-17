@@ -12,33 +12,52 @@ import {
 
 library.add(fab, faGithub, faInstagram, faXing, faLinkedin)
 
+const brands = [
+  {
+    iconName: "github",
+    text: "Github",
+    link: "https://github.com/ttwiesal",
+    color: "black",
+  },
+  {
+    iconName: "xing",
+    text: "Xing",
+    link: "https://www.xing.com/profile/Alexander_Wiesinger4/cv",
+    color: "green",
+  },
+  {
+    iconName: "linkedin",
+    text: "LinkedIn",
+    link: "https://www.linkedin.com/in/alexander-wiesinger-589b4399/",
+    color: "blue",
+  },
+  {
+    iconName: "instagram",
+    text: "Instagram",
+    link: "https://www.instagram.com/ttwiesal/",
+    color: "pink",
+  },
+]
+
+const brandLinks = []
+for (let brand of brands) {
+  brandLinks.push(
+    <BrandLink
+      iconName={brand.iconName}
+      text={brand.text}
+      link={brand.link}
+      color={brand.color}
+    />
+  )
+}
+
 const IndexPage = () => (
   <>
-    <h1>Hi people</h1>
-    <BrandLink
-      iconName="github"
-      text="Github"
-      link="https://github.com/ttwiesal"
-      color="black"
-    />
-    <BrandLink
-      iconName="xing"
-      text="Xing"
-      link="https://www.xing.com/profile/Alexander_Wiesinger4/cv"
-      color="green"
-    />
-    <BrandLink
-      iconName="linkedin"
-      text="LinkedIn"
-      link="https://www.linkedin.com/in/alexander-wiesinger-589b4399/"
-      color="blue"
-    />
-    <BrandLink
-      iconName="instagram"
-      text="Instagram"
-      link="https://www.instagram.com/ttwiesal/"
-      color="pink"
-    />
+    <center>
+      <h1>Hi people 👋</h1>
+    </center>
+
+    {brandLinks}
   </>
 )
 
