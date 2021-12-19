@@ -47,6 +47,7 @@ for (let brand of brands) {
       text={brand.text}
       link={brand.link}
       color={brand.color}
+      key={brand.text}
     />
   )
 }
