@@ -6,9 +6,10 @@ import "./layout.scss"
 const Layout = ({ children }) => {
   return (
     <>
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
+      <div class="stars-1"></div>
+      <div class="stars-2"></div>
+      <div class="stars-3"></div>
+
       <div
         style={{
           margin: `0 auto`,

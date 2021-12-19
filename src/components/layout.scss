@@ -72,4 +72,7 @@ samp {
   }
 }
 
-@include stars;
+@include nightSky;
+@include star(1, 700, 50s);
+@include star(2, 200, 100s);
+@include star(3, 100, 150s);
