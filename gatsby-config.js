@@ -9,5 +9,15 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "alex-wiesinger.dev",
+        short_name: "alexwiesinger",
+        start_url: "/",
+        display: "standalone",
+        icon: "src/images/icon.png",
+      },
+    },
   ],
 }
