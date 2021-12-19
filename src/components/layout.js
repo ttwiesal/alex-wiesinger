@@ -6,9 +6,9 @@ import "./layout.scss"
 const Layout = ({ children }) => {
   return (
     <>
-      <div class="stars-1"></div>
-      <div class="stars-2"></div>
-      <div class="stars-3"></div>
+      <div className="stars-1"></div>
+      <div className="stars-2"></div>
+      <div className="stars-3"></div>
 
       <div
         style={{
