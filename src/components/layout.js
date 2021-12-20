@@ -2,6 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 
 import "./layout.scss"
+import { Link } from "gatsby"
 
 const Layout = ({ children }) => {
   return (
@@ -12,9 +13,11 @@ const Layout = ({ children }) => {
 
       <div
         style={{
-          margin: `0 auto`,
           maxWidth: 320,
+          margin: `0 auto`,
           padding: `0 1.0875rem 1.45rem`,
+          maxHeight: "100vh",
+          overflowY: "auto",
         }}
       >
         <main>{children}</main>
@@ -24,6 +27,8 @@ const Layout = ({ children }) => {
           }}
         >
           © {new Date().getFullYear()}, Alexander Wiesinger
+          <br />
+          <Link to="/imprint">Imprint</Link>
         </footer>
       </div>
     </>
