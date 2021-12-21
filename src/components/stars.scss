@@ -16,22 +16,23 @@
   }
 }
 
+@mixin starStyle($size, $starCount) {
+  width: $size * 1px;
+  height: $size * 1px;
+  background: transparent;
+  box-shadow: multiple-box-shadow($starCount);
+}
+
 @mixin star($size, $starCount, $velocity) {
   .stars-#{$size} {
-    width: $size * 1px;
-    height: $size * 1px;
-    background: transparent;
-    box-shadow: multiple-box-shadow($starCount);
+    @include starStyle($size, $starCount);
     animation: animStar $velocity linear infinite;
 
     &:after {
       content: " ";
       position: absolute;
       top: 2000px;
-      width: $size * 1px;
-      height: $size * 1px;
-      background: transparent;
-      box-shadow: multiple-box-shadow($starCount);
+      @include starStyle($size, $starCount);
     }
   }
 
